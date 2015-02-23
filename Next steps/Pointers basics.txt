@@ -1,0 +1,33 @@
+int *b; 				//creates a pointer "b"
+b = new int; 		//allocates memory for the integer
+*b = 4;		 			//store 4 in the memory pointed by "b"
+int *c;
+c = b;					//make c point where b points
+*c = 5;					//changes the value of b and c
+
+
+int a = 2;
+int *pointer;
+*pointer = &a;	//pointer points to the direction of a
+*pointer = 45;	//changes the value of pointer and "a"
+
+delete pointer;	//free the storage
+
+
+// Passing parameters by reference.
+#include <iostream>
+using namespace std;
+
+void Duplicate(int& a, int& b, int& c) {
+  a *= 2;
+  b *= 2;
+  c *= 2;
+}
+
+int main() {
+  int x = 1, y = 3, z = 7;
+  Duplicate(x, y, z);
+  // The following outputs: x=2, y=6, z=14.
+  cout << c"x="<< x << ", y="<< y << ", z="<< z;
+  return 0;
+}
